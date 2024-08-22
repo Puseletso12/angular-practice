@@ -1,0 +1,41 @@
+<!-- 
+ ngOnChanges 
+ * when it is called: Called before ngOnlnit and whenever one or more data-bound input properties change
+ * purpose: This hook responds to changes in the input properties of a component or directive. It receives a SimpleChanges object that holds the current and previous values of  the changed properties.
+ * use case: ideal for detecting and acting upon changes in the input properties
+
+ngOnlnit
+ * when it is called: Called once, after the first ngOnChanges and when the component is initialized.
+ * purpose: This hook is used to perform component initialization, such as fetching data or setting up default values. It's a common place to start HTTP requests ir subscribe to observables
+ * use case: Best for initialization logic that should only run when the component is first created 
+
+ngDoCheck
+ * when it is called: Called during every change detection run, immediatley after ngOnChange and ngOnInit.
+ * purpose: This hook allows you to implement your own change detection algorithm. It's used to detect and act upon changes that Angular might not catch with its default change detection strategy
+ * use case: Use with caution, as it can be resource-intensive. It's useful for detecting changes in arrays or objects where ngOnChanges might not detect a deep mutation
+
+ngAfterContentInit
+ * when it is called: Called once after Angular projects external content into the component's view
+ * purpose: This hook is used to respond after Angular has inserted content into the components view 
+ * use case: Useful for operations that depend on the content that Angular projects like querying for a ContentChild
+
+ngAfterContentChecked
+ * when it is called: Called after every check of the content projected into the component
+ * purpose: This hook is used to perform actions after the projected content has been checked
+ * use case: Use for any post-checking logic needed for the projected content
+ 
+ngAfterViewInit
+ * when it is called:
+ * purpose:
+ * use case:
+
+ngAfterViewInit
+ * when it is called:
+ * purpose:
+ * use case:
+
+ngOnDestroy
+ * when it is called: Called just before Angular destroys the component or directive
+ * purpose: This 
+ * use case: Essential for preventing memory leaks by ensuring that resources are properly disposed 
+-->

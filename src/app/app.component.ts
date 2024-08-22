@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { UserListComponent } from "./components/user-list/user-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, UserListComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'practiceset1';
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+  }
+
+  ngOnInit() {
+    console.log('Initialized');
+  }
 }
